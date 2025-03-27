@@ -9,6 +9,7 @@ Dataset/
 # Ignore Python virtual environment and cache
 __pycache__/
 venv/
+NewEnv/
 
 # Ignore system files
 .DS_Store
