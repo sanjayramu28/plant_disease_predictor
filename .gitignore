@@ -50,3 +50,9 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Node.js dependencies
+node_modules/
+
+# Ignore dataset folder (if removed manually)
+Dataset/
