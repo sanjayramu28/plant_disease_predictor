@@ -42,3 +42,11 @@ next-env.d.ts
 
 # Ignore dataset folder (if removed manually)
 Dataset/
+
+# Ignore Python virtual environments
+venv/
+NewEnv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
