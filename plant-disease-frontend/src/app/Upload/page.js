@@ -139,27 +139,30 @@ const Upload = () => {
     <div className="container-fluid" style={{ position: "relative", fontFamily: " Roboto Flex" }}>
       <ToastContainer />
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center ">
         <form onSubmit={(e) => {
           e.preventDefault();
           predict();
         }} className='text-white'>
           <label for="images" className="drop-container" id="dropcontainer" onClick={drag}>
-            <span className="drop-title text-white">Drop files here</span>
+            <span className="drop-title text-white">DROP IMAGE HERE</span>
             or
-            <input type="file" id="images" className='p-3 d-flex justify-content-center w-75' accept="image/*" onChange={fileChange} required />
+            <div className='d-flex justify-content-center ms-5'>
+              <input type="file" id="images" className='ms-5' accept="image/*" onChange={fileChange} required />
+            </div>
           </label>
-          <div className="d-flex justify-content-center p-4">
-            <button className="button-50 w-75  fs-3" type="submit">Predict</button>
+          <div className="d-flex justify-content-center p-4 mt-5">
+            <button className="button-50 w-25  fs-3" type="submit">Predict</button>
           </div>
         </form>
       </div>
       {
         imagePreview && (
           <div className="d-flex justify-content-center" style={{ position: "relative" }}>
-            <img src={imagePreview} alt="Uploaded Preview" style={{ width: "400px", height: "400px", border: "2px solid black" }} />
+            <img src={imagePreview} alt="Uploaded Preview" style={{ width: "400px", height: "400px", border: "2px solid black", borderRadius:"25px" }} />
           </div>
-        )}
+        )
+       }
       {
         loader ? (
           <div class="loader"></div>)
@@ -191,7 +194,7 @@ const Upload = () => {
         diseaseInfo && (
           <>
             <div className='d-flex justify-content-center'>
-              <div className='w-75'>
+              <div className='w-75' style={{color:"white"}}>
 
                 <ReactMarkdown>{diseaseInfo}</ReactMarkdown>
 
@@ -242,7 +245,7 @@ const Upload = () => {
                   <div className='text-area w-100 mt-5' style={{ transform: "rotateY(0deg)" }}>
                     <textarea placeholder="Write your feedback here" className='mt-5' rows={8} style={{ width: "100%" }} name='feedback' value={feedback} onChange={(e) => handeltextareachange(e)}></textarea>
                     <div className='d-flex justify-content-center mt-5'>
-                      <button type='submit' className='btn'>Submit</button>
+                      <button type='submit' className='btn btn-warning w-25 mb-5 feedback' >Submit</button>
                     </div>
                   </div>
                 </form>

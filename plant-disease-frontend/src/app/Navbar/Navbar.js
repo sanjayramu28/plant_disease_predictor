@@ -7,14 +7,14 @@ const Navbar=()=>{
         <>
         <div className="row p-5 container-fluid ">
             <div className="col-md-4">
-                <img src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="logo" style={{width:"50px",height:"50px"}}/>
+                <img src="../../assests/logo.jpg" alt="logo" style={{width:"200px",height:"200px"}}/>
             </div>
-            <div className="col-md-8 d-flex justify-content-around nav-links">
+            <div className="col-md-8 d-flex justify-content-around nav-links align-items-center " style={{height:"200px"}}>
             <Link href="/Home" >Home</Link>
             {/* <label>About </label> */}
-            <Link href="/About">About</Link>
-            <Link href="/Upload">Upload</Link>
             <Link href="/Working">Working</Link>
+            {/* <Link href="/About">About</Link> */}
+            <Link href="/Upload">Upload</Link>
             <Link href="/Contact_Us">Contact Us</Link>
             
             </div>

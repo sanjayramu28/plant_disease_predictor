@@ -16,10 +16,10 @@ app.post("/api/get-disease-info", async (req, res) => {
   try {
     const { disease } = req.body;
 
-    const prompt = `Provide a concise yet professional description of the plant disease ${disease}. Include its cause, symptoms, and impact. Then, outline a clear and structured cure and prevention plan using numbered steps. Ensure the response is formatted in complete sentences, without markdown symbols or bullet points,also use bold styles wherever necessary.give it within 300 words.`;
+    const prompt = `Provide a professional and structured description of the plant disease ${disease}. Clearly explain its **cause, symptoms, and impact** in complete sentences. Then, present a **step-by-step cure and prevention plan** using bullet points and numbered steps for clarity. Use **bold styling** for key terms. Keep the response concise yet complete within 300 words. Ensure proper formatting without markdown symbols.`;
     const payload = {
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.7, maxOutputTokens: 250 },
+      generationConfig: { temperature: 0.7, maxOutputTokens: 500 },
     };
 
     const response = await axios.post(`${GOOGLE_API_URL}?key=${API_KEY}`, payload);

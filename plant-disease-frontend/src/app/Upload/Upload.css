@@ -61,7 +61,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 350px;
+  width: 1050px;
   padding: 20px;
   border-radius: 10px;
   border: 2px dashed #555;
@@ -88,12 +89,11 @@
   color: #444;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  /* text-align: ceter; */
   transition: color .2s ease-in-out;
 }
 
 
-/* HTML: <div class="loader"></div> */
 .loader2 {
   width: 60px;
   position: absolute;
@@ -132,18 +132,16 @@
 }
 
 
-
-/* CSS */
 .button-50 {
   appearance: button;
   /* width: 10px; */
-  background-color: white;
+  background-color: bisque;
   background-image: none;
   border: 1px solid red;
   border-radius: 4px;
   box-shadow: gray 4px 4px 0 0,#000 4px 4px 0 1px;
   box-sizing: border-box;
-  color: black;
+  color: brown;
   cursor: pointer;
   display: inline-block;
   font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
@@ -184,4 +182,10 @@
   .button-50 {
     padding: 12px 50px;
   }
+}
+
+.feedback{
+  background-color: bisque !important;
+  color: brown !important;
+  border-radius: 20px !important;
 }

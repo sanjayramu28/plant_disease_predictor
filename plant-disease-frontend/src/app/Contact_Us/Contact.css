@@ -1,0 +1,71 @@
+.user-img{
+    width: 200px;
+    height: 200px;
+}
+
+.user-profile{
+    cursor: pointer;
+}
+
+.user-profile:hover{
+    transform: scale(1.2);
+    box-shadow:  6px 2px 7px 1px ;
+    z-index: 10;
+}
+
+.neon-text {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
+    transition: text-shadow 0.3s ease-in-out;
+  }
+
+  body{
+    background-color: black !important;
+    /* color: gold !important; */
+}
+
+.card{
+    background-color: #F5F5F5 !important;
+}
+
+.about-img{
+    display: flex;
+    /* border-radius: 500px; */
+    padding: 50px;
+    /* justify-self: center; */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.imgabout{
+    width: 300px;
+    height: 300px;
+}
+
+
+.aboutus-svg svg{
+    width: 20px;  
+    /* margin: 20px;  */
+    /* padding: 100px;  */
+}
+
+.aboutus-svg svg:hover{
+    /* transition: 1s; */
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.aboutus-svg{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.aboutus-svg a{
+    color: black;
+}
