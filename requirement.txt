@@ -8,9 +8,10 @@ pandas==2.1.0
 librosa==0.10.1
 
 # Backend & API Handling
-Flask==3.0.0
-flask-cors==4.0.0
+fastapi==0.110.0
+uvicorn==0.27.1  # For running FastAPI server
 python-multipart==0.0.9  # For handling file uploads (images)
+pillow==10.2.0  # For image processing
 
-# Web Framework (Optional)
-streamlit  # If you're using Streamlit for the frontend
+# CORS Middleware
+fastapi-cors==0.3.0
