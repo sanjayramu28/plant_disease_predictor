@@ -58,7 +58,7 @@ async def predict(file: UploadFile = File(...)):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://plant-disease-predictor-1-vj8v.onrender.com"],  # Only allow your frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
