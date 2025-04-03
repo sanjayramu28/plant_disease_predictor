@@ -1,0 +1,46 @@
+body{
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.fade-in img{
+    transition: 1s;
+    transform: translateX(0px);
+}
+
+.step1 ul, .step3 ul{
+    transform: translateX(170%);
+}
+
+.step2 ul, .step4 ul{
+    transform: translateX(-170%);
+}
+
+.fade-in ul{
+    transition: 1s;
+    transform: translateX(0px);
+}
+
+.fade-out ul{
+    transition: 1s;
+    transform: translateX(0px);
+}
+
+.img-notanimated{
+    transform: translateX(-200%);
+}
+
+.img-notanimated2{
+    transform: translateX(500%);
+}
+
+.fade-out img{
+    transition: 1s;
+    transform: translateX(00px);
+}
+
+
+/* .col-md-6 li{
+    
+} */

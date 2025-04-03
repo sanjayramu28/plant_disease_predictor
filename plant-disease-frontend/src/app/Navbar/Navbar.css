@@ -1,0 +1,12 @@
+.nav-links a{
+    text-decoration: none;
+    color: bisque;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links a:hover{
+    /* transition: 0.3s ; */
+    border-bottom: 5px solid blue;
+    /* transform: scale(1.4); */
+}
