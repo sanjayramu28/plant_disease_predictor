@@ -4,6 +4,7 @@
 node_modules/
 /.pnp
 .pnp.*
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -50,9 +51,3 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Node.js dependencies
-node_modules/
-
-# Ignore dataset folder (if removed manually)
-Dataset/
