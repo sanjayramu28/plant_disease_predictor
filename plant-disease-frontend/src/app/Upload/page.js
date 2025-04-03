@@ -42,7 +42,8 @@ const Upload = () => {
     formData.append("file", file);
     try {
       setloader(true);
-      const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      // const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+      const BASE_URL = process.env.REACT_APP_API_URL || "https://plant-disease-predictor-vyj6.onrender.com";
       const response = await fetch(`${BASE_URL}/predict`, {
         method: "POST",
         body: formData
