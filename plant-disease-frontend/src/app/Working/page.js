@@ -58,12 +58,12 @@ const Working = () => {
                     Upload a Leaf Image</h3>
                 <div className="row mt-5 mb-5">
                     <div className="col-md-6 d-flex justify-content-center">
-                        <Image src={howitworksintro} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated" />
+                        <Image src={howitworksintro} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated" alt="how" />
                     </div>
                     <div className="col-md-6 d-flex align-items-center " style={{ height: "300px" }}>
                         <ul className="ms-5 fs-3">
                             <li>Take a clear image of the affected leaf using your smartphone or camera.</li>
-                            <li>Click the "Upload" button to select the image from your device.</li>
+                            <li>Click the &quot;Upload&quot; button to select the image from your device.</li>
                         </ul>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Working = () => {
                         </ul>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center mb-5">
-                        <Image src={howitwor} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated2" />
+                        <Image src={howitwor} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated2" alt="step 2" />
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ const Working = () => {
                     </span> Get Results & Disease Information</h3>
                 <div className="row mt-5 mb-5">
                     <div className="col-md-6 d-flex justify-content-center">
-                        <Image src={howitworksscan} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated" />
+                        <Image src={howitworksscan} style={{ width: "300px", height: "300px", borderRadius: "100px" }} className="img-notanimated" alt="step 3 "/>
                     </div>
                     <div className="col-md-6 d-flex align-items-center " style={{ height: "300px" }}>
                         <ul className="ms-5 fs-3">

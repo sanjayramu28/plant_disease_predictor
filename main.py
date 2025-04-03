@@ -1,5 +1,4 @@
 from fastapi import FastAPI, File, UploadFile
-
 import numpy as np
 import tensorflow as tf
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,8 +29,8 @@ CLASS_NAMES = [
 
 def preprocess_image(img):
     """Resize and normalize the image for model prediction."""
-    img = img.convert("RGB")  # Convert grayscale or RGBA images to RGB
-    img = img.resize((128, 128))  # Match model input size
+    img = img.convert("RGB")  
+    img = img.resize((128, 128))
     img = image.img_to_array(img) / 255.0  # Normalize
     img = np.expand_dims(img, axis=0)  # Expand dimensions for model
     return img

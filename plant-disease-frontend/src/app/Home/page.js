@@ -1,9 +1,5 @@
 import React from 'react'
 import './Home.css'
-import introduction from "../../../public/assests/introduction.png"
-import about from "../../../public/assests/about.jpg"
-import howitworks from "../../../public/assests/how it works.png"
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Home = () => {

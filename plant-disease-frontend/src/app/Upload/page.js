@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import './Upload.css';
+import Image from 'next/image';
 import ReactMarkdown from "react-markdown";
 import '../Feedback/Feedback.css';
 import emailjs from '@emailjs/browser';
@@ -145,7 +146,7 @@ const Upload = () => {
           e.preventDefault();
           predict();
         }} className='text-white'>
-          <label for="images" className="drop-container" id="dropcontainer" onClick={drag}>
+          <label className="drop-container" id="dropcontainer" onClick={drag}>
             <span className="drop-title text-white">DROP IMAGE HERE</span>
             or
             <div className='d-flex justify-content-center ms-5'>
@@ -160,7 +161,7 @@ const Upload = () => {
       {
         imagePreview && (
           <div className="d-flex justify-content-center" style={{ position: "relative" }}>
-            <img src={imagePreview} alt="Uploaded Preview" style={{ width: "400px", height: "400px", border: "2px solid black", borderRadius:"25px" }} />
+            <Image src={imagePreview} alt="Uploaded Preview" style={{ width: "400px", height: "400px", border: "2px solid black", borderRadius:"25px" }} unoptimized />
           </div>
         )
        }
