@@ -6,7 +6,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin:"https://plant-disease-predictor-1-vj8v.onrender.com",
+    credentials: true,
+    methods: ["GET", "POST"],
+  }
+));
 app.use(express.json());
 
 const GOOGLE_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
