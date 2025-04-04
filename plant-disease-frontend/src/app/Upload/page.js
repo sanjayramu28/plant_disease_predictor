@@ -59,10 +59,12 @@ const Upload = () => {
     setloader(false);
   };
 
+  const predicturl=process.env.NEXT_PUBLIC_PREDICT_URL|| "http://localhost:5000"
+
   const searchdisease = async (disease) => {
     try {
       setinfoloader(true);
-      const response = await fetch("http://localhost:5000/api/get-disease-info", {
+      const response = await fetch(`${predicturl}/api/get-disease-info`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ disease: disease })
