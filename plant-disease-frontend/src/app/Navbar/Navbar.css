@@ -1,12 +1,98 @@
-.nav-links a{
-    text-decoration: none;
-    color: bisque;
-    font-weight: bold;
-    font-size: 20px;
+.nav-links a {
+  text-decoration: none;
+  color: bisque;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.nav-links a:hover{
-    /* transition: 0.3s ; */
-    border-bottom: 5px solid blue;
-    /* transform: scale(1.4); */
+.nav-links a:hover {
+  /* transition: 0.3s ; */
+  border-bottom: 5px solid blue;
+  /* transform: scale(1.4); */
+}
+
+.bars {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  right: 0;
+  width: 60px;
+  height: 90px;
+  display: none !important;
+  /* font-size: 20px; */
+}
+
+div.active {
+  display: grid !important;
+  width: 200px !important;
+  height: auto !important;
+  flex-direction: column !important;
+  position: absolute;
+  right: 1;
+  top: 0;
+  transition: 0s !important;
+  /* background-color: rgba(255, 255, 255, 0.2); semi-transparent */
+  /* backdrop-filter: blur(10px); */
+  /* filter: blur(10px); */
+}
+
+.fax {
+  position: absolute;
+  top: -10px;
+  cursor: pointer;
+  /* width: 50px; */
+  z-index: 11;
+  /* background-color: red; */
+  text-shadow: 2px 2px 4px #0000;
+  border-radius: 200px;
+  display: none;
+  right: 1;
+  padding: 10px;
+  font-size: 40px;
+}
+
+
+.active a {
+  z-index: 10;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid white;
+  width: 110%;
+  display: flex;
+  justify-content: center !important;
+}
+
+.hide svg {
+  display: none !important;
+}
+
+@media (max-width: 770px) {
+
+  .logoimg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .logoimg img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  div.nav-links {
+    display: none !important;
+  }
+
+  .nav-links.active {
+    display: grid !important;
+    background-color: black !important;
+    right: 0;
+  }
+
+  #bar {
+    display: block !important;
+  }
+
+  .nav-links.active+.fax {
+    display: block !important;
+  }
 }

@@ -1,3 +1,9 @@
+
+
+body{
+  background-color: black !important;
+  color: white !important;
+}
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
@@ -134,7 +140,7 @@
 
 .button-50 {
   appearance: button;
-  /* width: 10px; */
+  width: 500px !important;
   background-color: bisque;
   background-image: none;
   border: 1px solid red;
@@ -178,8 +184,11 @@
   transform: translate(2px, 2px);
 }
 
+
+
 @media (min-width: 768px) {
   .button-50 {
+    /* width: 2000px !important; */
     padding: 12px 50px;
   }
 }
@@ -188,4 +197,24 @@
   background-color: bisque !important;
   color: brown !important;
   border-radius: 20px !important;
+}
+
+
+@media(max-width:800px){
+  .drop-container{
+    width: 100% !important;
+  }
+}
+
+@media (max-width:600px) {
+  
+  .drop-container{
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .bars{
+    /* right: -100px !important; */
+  }
 }

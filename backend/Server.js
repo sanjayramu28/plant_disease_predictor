@@ -10,7 +10,7 @@ app.use(cors(
   {
     origin:"https://plant-disease-predictor-1-vj8v.onrender.com",
     credentials: true,
-    methods: ["GET", "POST"],
+    methods: ["POST"],
   }
 ));
 app.use(express.json());

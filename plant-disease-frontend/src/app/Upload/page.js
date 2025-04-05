@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 
+
 const Upload = () => {
   const [file, setFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
@@ -44,7 +45,7 @@ const Upload = () => {
     try {
       setloader(true);
       // const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
-      const BASE_URL = process.env.REACT_APP_API_URL || "https://plant-disease-predictor-vyj6.onrender.com";
+      const BASE_URL =  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
       const response = await fetch(`${BASE_URL}/predict`, {
         method: "POST",
         body: formData
@@ -59,7 +60,7 @@ const Upload = () => {
     setloader(false);
   };
 
-  const predicturl=process.env.NEXT_PUBLIC_PREDICT_URL|| "http://localhost:5000"
+  const predicturl = process.env.NEXT_PUBLIC_PREDICT_URL || "http://localhost:5000"
 
   const searchdisease = async (disease) => {
     try {
@@ -141,35 +142,40 @@ const Upload = () => {
 
   return (
     <div className="container-fluid" style={{ position: "relative", fontFamily: " Roboto Flex" }}>
+
       <ToastContainer />
 
       <div className="d-flex justify-content-center ">
         <form onSubmit={(e) => {
           e.preventDefault();
           predict();
-        }} className='text-white'>
-          <label className="drop-container" id="dropcontainer" onClick={drag}>
-            <span className="drop-title text-white">DROP IMAGE HERE</span>
-            or
-            <div className='d-flex justify-content-center ms-5'>
-              <input type="file" id="images" className='ms-5' accept="image/*" onChange={fileChange} required />
-            </div>
-          </label>
+        }} className='text-white w-100'>
+          <div className='d-flex justify-content-center'>
+            <label className="drop-container" id="dropcontainer" onClick={drag}>
+              <span className="drop-title text-white">DROP IMAGE HERE</span>
+              or
+              <div className='d-flex justify-content-center ms-5'>
+                <input type="file" id="images" className='ms-5' accept="image/*" onChange={fileChange} required />
+              </div>
+            </label>
+          </div>
           <div className="d-flex justify-content-center p-4 mt-5">
-            <button className="button-50 w-25  fs-3" type="submit">Predict</button>
+            <button className="button-50  fs-3" type="submit">Predict</button>
           </div>
         </form>
       </div>
       {
         imagePreview && (
-          <div className="d-flex justify-content-center" style={{ position: "relative" }}>
-            <Image src={imagePreview} alt="Uploaded Preview" style={{ width: "400px", height: "400px", border: "2px solid black", borderRadius:"25px" }} unoptimized />
+          <div  className="d-flex justify-content-center">
+          <div style={{ position: "relative", width: "400px", height: "400px", border: "2px solid black", borderRadius: "25px" }}>
+            <Image src={imagePreview} alt="Uploaded Preview" fill />
+          </div>
           </div>
         )
-       }
+      }
       {
         loader ? (
-          <div class="loader"></div>)
+          <div className="loader"></div>)
           :
           (
             <>
@@ -187,7 +193,7 @@ const Upload = () => {
         )}
       {
         infoloader ? (
-          <div class="loader2"></div>)
+          <div className="loader2"></div>)
           :
           (
             <>
@@ -198,7 +204,7 @@ const Upload = () => {
         diseaseInfo && (
           <>
             <div className='d-flex justify-content-center'>
-              <div className='w-75' style={{color:"white"}}>
+              <div className='w-75' style={{ color: "white" }}>
 
                 <ReactMarkdown>{diseaseInfo}</ReactMarkdown>
 
