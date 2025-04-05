@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
   {
-    origin:"https://plant-disease-predictor-1-vj8v.onrender.com",
+    origin: "https://plant-disease-predictor-1-vj8v.onrender.com",
     credentials: true,
     methods: ["POST"],
   }
@@ -21,7 +21,7 @@ const API_KEY = process.env.GOOGLE_API_KEY; // Store your API key in .env
 app.post("/api/get-disease-info", async (req, res) => {
   try {
     const { disease } = req.body;
-
+    console.log("Incoming : ", req.body)
     const prompt = `Provide a professional and structured description of the plant disease ${disease}. Clearly explain its **cause, symptoms, and impact** in complete sentences. Then, present a **step-by-step cure and prevention plan** using bullet points and numbered steps for clarity. Use **bold styling** for key terms. Keep the response concise yet complete within 300 words. Ensure proper formatting without markdown symbols.`;
     const payload = {
       contents: [{ parts: [{ text: prompt }] }],

@@ -46,7 +46,7 @@ div.active {
   text-shadow: 2px 2px 4px #0000;
   border-radius: 200px;
   display: none;
-  right: 1;
+  right: 0;
   padding: 10px;
   font-size: 40px;
 }

@@ -60,10 +60,10 @@ const Upload = () => {
     setloader(false);
   };
 
-  const predicturl = process.env.NEXT_PUBLIC_PREDICT_URL || "http://localhost:5000"
-
+  
   const searchdisease = async (disease) => {
     try {
+      const predicturl = process.env.NEXT_PUBLIC_PREDICT_URL || "http://localhost:5000"
       setinfoloader(true);
       const response = await fetch(`${predicturl}/api/get-disease-info`, {
         method: "POST",
